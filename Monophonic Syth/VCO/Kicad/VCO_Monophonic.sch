@@ -1,0 +1,150 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Transistor_BJT:2N2219 Q?
+U 1 1 60A42865
+P 4950 2950
+F 0 "Q?" H 5140 2996 50  0000 L CNN
+F 1 "2N2219" H 5140 2905 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-39-3" H 5150 2875 50  0001 L CIN
+F 3 "http://www.onsemi.com/pub_link/Collateral/2N2219-D.PDF" H 4950 2950 50  0001 L CNN
+	1    4950 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:2N2219 Q?
+U 1 1 60A44330
+P 6050 2950
+F 0 "Q?" H 6240 2996 50  0000 L CNN
+F 1 "2N2219" H 6240 2905 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-39-3" H 6250 2875 50  0001 L CIN
+F 3 "http://www.onsemi.com/pub_link/Collateral/2N2219-D.PDF" H 6050 2950 50  0001 L CNN
+	1    6050 2950
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	5050 3150 5050 3250
+Wire Wire Line
+	5050 3250 5500 3250
+Wire Wire Line
+	5950 3250 5950 3150
+Wire Wire Line
+	5500 4000 5050 4000
+Wire Wire Line
+	5500 3250 5500 3400
+Connection ~ 5500 3250
+Wire Wire Line
+	5500 3250 5950 3250
+$Comp
+L Device:R_Small R?
+U 1 1 60A51E6A
+P 5500 3500
+F 0 "R?" H 5559 3546 50  0000 L CNN
+F 1 "R_Small" H 5559 3455 50  0000 L CNN
+F 2 "" H 5500 3500 50  0001 C CNN
+F 3 "~" H 5500 3500 50  0001 C CNN
+	1    5500 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5500 3600 5500 4000
+$Comp
+L pspice:OPAMP U?
+U 1 1 60A572EE
+P 4750 4000
+F 0 "U?" H 5094 4046 50  0000 L CNN
+F 1 "OPAMP" H 5094 3955 50  0000 L CNN
+F 2 "" H 4750 4000 50  0001 C CNN
+F 3 "~" H 4750 4000 50  0001 C CNN
+	1    4750 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 60A582DE
+P 4650 4300
+F 0 "#PWR?" H 4650 4050 50  0001 C CNN
+F 1 "GND" H 4655 4127 50  0000 C CNN
+F 2 "" H 4650 4300 50  0001 C CNN
+F 3 "" H 4650 4300 50  0001 C CNN
+	1    4650 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 60A5B9B2
+P 4250 4300
+F 0 "#PWR?" H 4250 4050 50  0001 C CNN
+F 1 "GND" H 4255 4127 50  0000 C CNN
+F 2 "" H 4250 4300 50  0001 C CNN
+F 3 "" H 4250 4300 50  0001 C CNN
+	1    4250 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4450 4100 4250 4100
+Wire Wire Line
+	4250 4100 4250 4300
+Wire Wire Line
+	4450 3900 4250 3900
+Wire Wire Line
+	4250 3900 4250 2250
+Wire Wire Line
+	4250 2250 5050 2250
+Wire Wire Line
+	5050 2750 5050 2250
+Wire Wire Line
+	5050 2250 5050 1950
+Connection ~ 5050 2250
+$Comp
+L power:GND #PWR?
+U 1 1 60A5F6CD
+P 6400 3050
+F 0 "#PWR?" H 6400 2800 50  0001 C CNN
+F 1 "GND" H 6405 2877 50  0000 C CNN
+F 2 "" H 6400 3050 50  0001 C CNN
+F 3 "" H 6400 3050 50  0001 C CNN
+	1    6400 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6250 2950 6400 2950
+Wire Wire Line
+	6400 2950 6400 3050
+$Comp
+L Device:R_Small R?
+U 1 1 60A62468
+P 5050 1850
+F 0 "R?" H 5109 1896 50  0000 L CNN
+F 1 "R_Small" H 5109 1805 50  0000 L CNN
+F 2 "" H 5050 1850 50  0001 C CNN
+F 3 "~" H 5050 1850 50  0001 C CNN
+	1    5050 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5050 1750 5050 1500
+Text GLabel 4750 2950 0    50   Input ~ 0
+Vin_exponential
+Wire Wire Line
+	5950 1500 5950 2750
+Text GLabel 5950 2150 2    50   Input ~ 0
+Iout_exponential
+Text GLabel 5050 1500 0    50   Input ~ 0
++VDD
+Text GLabel 4650 3700 0    50   Input ~ 0
++VDD
+$EndSCHEMATC
