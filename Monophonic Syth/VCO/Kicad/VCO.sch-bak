@@ -1,0 +1,150 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 3
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Transistor_BJT:2N2219 Q?
+U 1 1 610A6962
+P 5447 3359
+F 0 "Q?" H 5637 3405 50  0000 L CNN
+F 1 "2N2219" H 5637 3314 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-39-3" H 5647 3284 50  0001 L CIN
+F 3 "http://www.onsemi.com/pub_link/Collateral/2N2219-D.PDF" H 5447 3359 50  0001 L CNN
+	1    5447 3359
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:2N2219 Q?
+U 1 1 610A6968
+P 6547 3359
+F 0 "Q?" H 6737 3405 50  0000 L CNN
+F 1 "2N2219" H 6737 3314 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-39-3" H 6747 3284 50  0001 L CIN
+F 3 "http://www.onsemi.com/pub_link/Collateral/2N2219-D.PDF" H 6547 3359 50  0001 L CNN
+	1    6547 3359
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	5547 3559 5547 3659
+Wire Wire Line
+	5547 3659 5997 3659
+Wire Wire Line
+	6447 3659 6447 3559
+Wire Wire Line
+	5997 4409 5547 4409
+Wire Wire Line
+	5997 3659 5997 3809
+Connection ~ 5997 3659
+Wire Wire Line
+	5997 3659 6447 3659
+$Comp
+L Device:R_Small R?
+U 1 1 610A6975
+P 5997 3909
+F 0 "R?" H 6056 3955 50  0000 L CNN
+F 1 "R_Small" H 6056 3864 50  0000 L CNN
+F 2 "" H 5997 3909 50  0001 C CNN
+F 3 "~" H 5997 3909 50  0001 C CNN
+	1    5997 3909
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5997 4009 5997 4409
+$Comp
+L pspice:OPAMP U?
+U 1 1 610A697C
+P 5247 4409
+F 0 "U?" H 5591 4455 50  0000 L CNN
+F 1 "OPAMP" H 5591 4364 50  0000 L CNN
+F 2 "" H 5247 4409 50  0001 C CNN
+F 3 "~" H 5247 4409 50  0001 C CNN
+	1    5247 4409
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 610A6982
+P 5147 4709
+F 0 "#PWR?" H 5147 4459 50  0001 C CNN
+F 1 "GND" H 5152 4536 50  0000 C CNN
+F 2 "" H 5147 4709 50  0001 C CNN
+F 3 "" H 5147 4709 50  0001 C CNN
+	1    5147 4709
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 610A6988
+P 4747 4709
+F 0 "#PWR?" H 4747 4459 50  0001 C CNN
+F 1 "GND" H 4752 4536 50  0000 C CNN
+F 2 "" H 4747 4709 50  0001 C CNN
+F 3 "" H 4747 4709 50  0001 C CNN
+	1    4747 4709
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4947 4509 4747 4509
+Wire Wire Line
+	4747 4509 4747 4709
+Wire Wire Line
+	4947 4309 4747 4309
+Wire Wire Line
+	4747 4309 4747 2659
+Wire Wire Line
+	4747 2659 5547 2659
+Wire Wire Line
+	5547 3159 5547 2659
+Wire Wire Line
+	5547 2659 5547 2359
+Connection ~ 5547 2659
+$Comp
+L power:GND #PWR?
+U 1 1 610A6996
+P 6897 3459
+F 0 "#PWR?" H 6897 3209 50  0001 C CNN
+F 1 "GND" H 6902 3286 50  0000 C CNN
+F 2 "" H 6897 3459 50  0001 C CNN
+F 3 "" H 6897 3459 50  0001 C CNN
+	1    6897 3459
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6747 3359 6897 3359
+Wire Wire Line
+	6897 3359 6897 3459
+$Comp
+L Device:R_Small R?
+U 1 1 610A699E
+P 5547 2259
+F 0 "R?" H 5606 2305 50  0000 L CNN
+F 1 "R_Small" H 5606 2214 50  0000 L CNN
+F 2 "" H 5547 2259 50  0001 C CNN
+F 3 "~" H 5547 2259 50  0001 C CNN
+	1    5547 2259
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5547 2159 5547 1909
+Text GLabel 5247 3359 0    50   Input ~ 0
+Vin_exponential
+Wire Wire Line
+	6447 1909 6447 3159
+Text GLabel 6447 2559 2    50   Input ~ 0
+Iout_exponential
+Text GLabel 5547 1909 0    50   Input ~ 0
++VDD
+Text GLabel 5147 4109 0    50   Input ~ 0
++VDD
+$EndSCHEMATC
